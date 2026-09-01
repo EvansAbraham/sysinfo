@@ -1,0 +1,5 @@
+sysinfo (0.1.0-1) unstable; urgency=medium
+
+  * Initial Debian package release.
+
+ -- Evans Abraham <evansabrahamj@gmail.com>  Tue, 01 Sep 2026 13:50:00 +0530

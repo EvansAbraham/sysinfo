@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Debian build artifacts
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/sysinfo/
+*.deb
+*.changes
+*.buildinfo
+*.dsc
+*.orig.tar.gz
+*.debian.tar.xz
+
+# Test / coverage
+.coverage
+htmlcov/
+
+# Editors
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,14 @@
+Source: sysinfo
+Section: utils
+Priority: optional
+Maintainer: Evans Abraham <evansabrahamj@gmail.com>
+Build-Depends: debhelper-compat (= 13), dh-python, python3-all, python3-setuptools, python3-pytest
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+
+Package: sysinfo
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: Linux system information command-line utility
+ A Python command-line utility that displays system information
+ including operating system, CPU, memory, disk, swap, and uptime.

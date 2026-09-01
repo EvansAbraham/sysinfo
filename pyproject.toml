@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sysinfo"
+version = "0.1.0"
+description = "A simple Linux system information CLI tool"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+sysinfo = "sysinfo.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
