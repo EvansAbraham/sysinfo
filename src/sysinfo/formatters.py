@@ -2,7 +2,6 @@ import json
 
 
 def format_bytes(value):
-    """Convert bytes into a human-readable value."""
     units = ["B", "KB", "MB", "GB", "TB"]
 
     for unit in units:
@@ -15,7 +14,6 @@ def format_bytes(value):
 
 
 def format_uptime(seconds):
-    """Convert seconds into a human-readable uptime."""
     seconds = int(seconds)
 
     days, seconds = divmod(seconds, 86400)
@@ -40,7 +38,6 @@ def format_uptime(seconds):
 
 
 def format_json(system_info):
-    """Convert system information into formatted JSON."""
     data = {
         "os": system_info["os"],
         "kernel": system_info["kernel"],

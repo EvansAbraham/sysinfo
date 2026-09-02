@@ -5,7 +5,6 @@ import socket
 
 
 def get_os_info():
-    """Get the operating system name."""
     try:
         with open("/etc/os-release") as file:
             for line in file:
@@ -19,7 +18,6 @@ def get_os_info():
 
 
 def get_cpu_info():
-    """Get basic CPU information."""
     cpu_model = "Unknown"
 
     try:
@@ -38,7 +36,6 @@ def get_cpu_info():
     }
 
 def get_memory_info():
-    """Get system memory and swap information."""
     memory = {}
 
     try:
@@ -81,7 +78,6 @@ def get_memory_info():
     }
 
 def get_disk_info(path="/"):
-    """Get disk usage information."""
     usage = shutil.disk_usage(path)
 
     return {
@@ -92,13 +88,11 @@ def get_disk_info(path="/"):
 
 
 def get_uptime():
-    """Get system uptime in seconds."""
     with open("/proc/uptime") as file:
         return float(file.readline().split()[0])
 
 
 def format_bytes(value):
-    """Convert bytes into a human-readable value."""
     units = ["B", "KB", "MB", "GB", "TB"]
 
     for unit in units:
@@ -111,7 +105,6 @@ def format_bytes(value):
 
 
 def format_uptime(seconds):
-    """Convert seconds into a human-readable uptime."""
     seconds = int(seconds)
 
     days, seconds = divmod(seconds, 86400)
@@ -135,7 +128,6 @@ def format_uptime(seconds):
     return " ".join(parts)
 
 def collect_system_info():
-    """Collect all system information."""
     return {
         "os": get_os_info(),
         "kernel": platform.release(),
